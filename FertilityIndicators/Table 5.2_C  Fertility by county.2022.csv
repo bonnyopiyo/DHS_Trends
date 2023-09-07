@@ -1,0 +1,142 @@
+County,Category,Proportion
+Mombasa,TFR,2.9
+Mombasa,Percentage of women aged 15-49 currently pregnant,4.7
+Mombasa,Mean number of children for women aged 40-49,3.6
+Kwale,TFR,4.2
+Kwale,Percentage of women aged 15-49 currently pregnant,7.2
+Kwale,Mean number of children for women aged 40-49,5.1
+Kilifi,TFR,3.4
+Kilifi,Percentage of women aged 15-49 currently pregnant,6.8
+Kilifi,Mean number of children for women aged 40-49,5.5
+Tana River,TFR,5.7
+Tana River,Percentage of women aged 15-49 currently pregnant,8.6
+Tana River,Mean number of children for women aged 40-49,5.8
+Lamu,TFR,4.6
+Lamu,Percentage of women aged 15-49 currently pregnant,8.8
+Lamu,Mean number of children for women aged 40-49,4.9
+Taita/Taveta,TFR,3.5
+Taita/Taveta,Percentage of women aged 15-49 currently pregnant,3.9
+Taita/Taveta,Mean number of children for women aged 40-49,3.8
+Garissa,TFR,5.3
+Garissa,Percentage of women aged 15-49 currently pregnant,6.8
+Garissa,Mean number of children for women aged 40-49,7.1
+Wajir,TFR,6.8
+Wajir,Percentage of women aged 15-49 currently pregnant,11.0
+Wajir,Mean number of children for women aged 40-49,7.8
+Mandera,TFR,7.7
+Mandera,Percentage of women aged 15-49 currently pregnant,10.5
+Mandera,Mean number of children for women aged 40-49,7.4
+Marsabit,TFR,6.3
+Marsabit,Percentage of women aged 15-49 currently pregnant,8.3
+Marsabit,Mean number of children for women aged 40-49,5.3
+Isiolo,TFR,4.5
+Isiolo,Percentage of women aged 15-49 currently pregnant,5.6
+Isiolo,Mean number of children for women aged 40-49,5.2
+Meru,TFR,3.4
+Meru,Percentage of women aged 15-49 currently pregnant,4.9
+Meru,Mean number of children for women aged 40-49,3.5
+Tharaka-Nithi,TFR,3.1
+Tharaka-Nithi,Percentage of women aged 15-49 currently pregnant,4.2
+Tharaka-Nithi,Mean number of children for women aged 40-49,4.1
+Embu,TFR,3.1
+Embu,Percentage of women aged 15-49 currently pregnant,4.0
+Embu,Mean number of children for women aged 40-49,3.2
+Kitui,TFR,3.2
+Kitui,Percentage of women aged 15-49 currently pregnant,2.4
+Kitui,Mean number of children for women aged 40-49,4.6
+Machakos,TFR,2.8
+Machakos,Percentage of women aged 15-49 currently pregnant,4.0
+Machakos,Mean number of children for women aged 40-49,3.4
+Makueni,TFR,3.3
+Makueni,Percentage of women aged 15-49 currently pregnant,4.9
+Makueni,Mean number of children for women aged 40-49,4.1
+Nyandarua,TFR,3.6
+Nyandarua,Percentage of women aged 15-49 currently pregnant,3.6
+Nyandarua,Mean number of children for women aged 40-49,4.3
+Nyeri,TFR,3.1
+Nyeri,Percentage of women aged 15-49 currently pregnant,3.4
+Nyeri,Mean number of children for women aged 40-49,2.9
+Kirinyaga,TFR,2.8
+Kirinyaga,Percentage of women aged 15-49 currently pregnant,4.0
+Kirinyaga,Mean number of children for women aged 40-49,2.8
+Murang’a,TFR,3.5
+Murang’a,Percentage of women aged 15-49 currently pregnant,3.5
+Murang’a,Mean number of children for women aged 40-49,3.4
+Kiambu,TFR,2.9
+Kiambu,Percentage of women aged 15-49 currently pregnant,4.6
+Kiambu,Mean number of children for women aged 40-49,3.3
+Turkana,TFR,6.0
+Turkana,Percentage of women aged 15-49 currently pregnant,7.5
+Turkana,Mean number of children for women aged 40-49,5.9
+West Pokot,TFR,6.9
+West Pokot,Percentage of women aged 15-49 currently pregnant,13.2
+West Pokot,Mean number of children for women aged 40-49,7.3
+Samburu,TFR,5.8
+Samburu,Percentage of women aged 15-49 currently pregnant,6.4
+Samburu,Mean number of children for women aged 40-49,6.4
+Trans Nzoia,TFR,3.6
+Trans Nzoia,Percentage of women aged 15-49 currently pregnant,4.5
+Trans Nzoia,Mean number of children for women aged 40-49,5.2
+Uasin Gishu,TFR,3.1
+Uasin Gishu,Percentage of women aged 15-49 currently pregnant,6.8
+Uasin Gishu,Mean number of children for women aged 40-49,4.1
+Elgeyo/Marakwet,TFR,4.1
+Elgeyo/Marakwet,Percentage of women aged 15-49 currently pregnant,4.5
+Elgeyo/Marakwet,Mean number of children for women aged 40-49,5.0
+Nandi,TFR,3.0
+Nandi,Percentage of women aged 15-49 currently pregnant,3.9
+Nandi,Mean number of children for women aged 40-49,4.5
+Baringo,TFR,4.4
+Baringo,Percentage of women aged 15-49 currently pregnant,7.4
+Baringo,Mean number of children for women aged 40-49,5.6
+Laikipia,TFR,3.4
+Laikipia,Percentage of women aged 15-49 currently pregnant,5.9
+Laikipia,Mean number of children for women aged 40-49,4.3
+Nakuru,TFR,3.4
+Nakuru,Percentage of women aged 15-49 currently pregnant,5.2
+Nakuru,Mean number of children for women aged 40-49,4.3
+Narok,TFR,4.9
+Narok,Percentage of women aged 15-49 currently pregnant,7.3
+Narok,Mean number of children for women aged 40-49,6.4
+Kajiado,TFR,3.5
+Kajiado,Percentage of women aged 15-49 currently pregnant,7.5
+Kajiado,Mean number of children for women aged 40-49,3.9
+Kericho,TFR,3.2
+Kericho,Percentage of women aged 15-49 currently pregnant,4.7
+Kericho,Mean number of children for women aged 40-49,4.7
+Bomet,TFR,3.4
+Bomet,Percentage of women aged 15-49 currently pregnant,3.9
+Bomet,Mean number of children for women aged 40-49,5.0
+Kakamega,TFR,3.7
+Kakamega,Percentage of women aged 15-49 currently pregnant,5.3
+Kakamega,Mean number of children for women aged 40-49,5.0
+Vihiga,TFR,3.5
+Vihiga,Percentage of women aged 15-49 currently pregnant,4.2
+Vihiga,Mean number of children for women aged 40-49,4.6
+Bungoma,TFR,3.6
+Bungoma,Percentage of women aged 15-49 currently pregnant,6.0
+Bungoma,Mean number of children for women aged 40-49,5.5
+Busia,TFR,3.7
+Busia,Percentage of women aged 15-49 currently pregnant,6.5
+Busia,Mean number of children for women aged 40-49,5.6
+Siaya,TFR,4.0
+Siaya,Percentage of women aged 15-49 currently pregnant,4.7
+Siaya,Mean number of children for women aged 40-49,5.5
+Kisumu,TFR,3.5
+Kisumu,Percentage of women aged 15-49 currently pregnant,5.6
+Kisumu,Mean number of children for women aged 40-49,5.1
+Homa Bay,TFR,3.7
+Homa Bay,Percentage of women aged 15-49 currently pregnant,5.5
+Homa Bay,Mean number of children for women aged 40-49,5.6
+Migori,TFR,4.4
+Migori,Percentage of women aged 15-49 currently pregnant,5.0
+Migori,Mean number of children for women aged 40-49,6.3
+Kisii,TFR,3.0
+Kisii,Percentage of women aged 15-49 currently pregnant,4.2
+Kisii,Mean number of children for women aged 40-49,4.3
+Nyamira,TFR,2.7
+Nyamira,Percentage of women aged 15-49 currently pregnant,2.7
+Nyamira,Mean number of children for women aged 40-49,4.7
+Nairobi City,TFR,2.6
+Nairobi City,Percentage of women aged 15-49 currently pregnant,6.4
+Nairobi City,Mean number of children for women aged 40-49,3.1
