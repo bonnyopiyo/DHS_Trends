@@ -10,7 +10,7 @@ setwd("C:/Users/bonfa/Downloads/DHS_Indicators/KDHS_Survey_On_HIV/Data Sets")
 Fertility_by_county_2014 <- read_csv("Table 5.2_C  Fertility by county.2014.csv")
 Fertility_by_county_2022 <- read_csv("Table 5.2_C  Fertility by county.2022.csv")
 
-
+#This is a test commit
 # Pivot the 2014 data with meaningful column names
 pivot_2014 <- Fertility_by_county_2014 %>%
   pivot_wider(
