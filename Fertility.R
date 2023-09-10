@@ -4,16 +4,15 @@ library(tidyr)
 library(gt)
 library(gtExtras)
 library(tidyverse)
-Table_5_2_C_Fertility_by_county_2014 <- read_csv("FertilityIndicators/Table 5.2_C  Fertility by county.2014.csv")
-Table_5_2_C_Fertility_by_county_2022 <- read_csv("FertilityIndicators/Table 5.2_C  Fertility by county.2022.csv")
-str(Table_5_2_C_Fertility_by_county_2014)
-head(Table_5_2_C_Fertility_by_county_2014)
-str(Table_5_2_C_Fertility_by_county_2022)
-head(Table_5_2_C_Fertility_by_county_2022)
+
+setwd("C:/Users/bonfa/Downloads/DHS_Indicators/KDHS_Survey_On_HIV/Data Sets")
+
+Fertility_by_county_2014 <- read_csv("Table 5.2_C  Fertility by county.2014.csv")
+Fertility_by_county_2022 <- read_csv("Table 5.2_C  Fertility by county.2022.csv")
 
 
 # Pivot the 2014 data with meaningful column names
-pivot_2014 <- Table_5_2_C_Fertility_by_county_2014 %>%
+pivot_2014 <- Fertility_by_county_2014 %>%
   pivot_wider(
     names_from = Category,
     values_from = Proportion,
@@ -21,7 +20,7 @@ pivot_2014 <- Table_5_2_C_Fertility_by_county_2014 %>%
   )
 
 # Pivot the 2022 data with meaningful column names
-pivot_2022 <- Table_5_2_C_Fertility_by_county_2022 %>%
+pivot_2022 <- Fertility_by_county_2022 %>%
   pivot_wider(
     names_from = Category,
     values_from = Proportion,
