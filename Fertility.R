@@ -10,7 +10,6 @@ setwd("C:/Users/bonfa/Downloads/DHS_Indicators/KDHS_Survey_On_HIV/Data Sets")
 Fertility_by_county_2014 <- read_csv("Table 5.2_C  Fertility by county.2014.csv")
 Fertility_by_county_2022 <- read_csv("Table 5.2_C  Fertility by county.2022.csv")
 
-#This is a test commit
 # Pivot the 2014 data with meaningful column names
 pivot_2014 <- Fertility_by_county_2014 %>%
   pivot_wider(
@@ -54,82 +53,100 @@ pivot_2022 <- pivot_2022 %>%
 # Merge the pivoted data
 comparison_data <- full_join(pivot_2014, pivot_2022, by = "County")
 
-# Create a gt table
-gt_table <- comparison_data %>%
-  mutate(TFR_Trend = ifelse(`2022_TFR` > `2014_TFR`, "↗", "↘"),
-         Pregnancy_Trend = ifelse(`2022_Percentage of women aged 15-49 currently pregnant` > `2014_women aged 15-49 who are currently pregnant`, "↗", "↘"),
-         Children_Trend = ifelse(`2022_Mean number of children for women aged 40-49` > `2014_Mean number of children ever born to women aged 40-49`, "↗", "↘")) %>%
-  gt() %>%
-  tab_header(
-    title = "Comparison of Fertility Indicators (2014 vs. 2022)",
-    subtitle = "Change in Fertility Indicators Trends"
-  ) %>%
-  cols_label(
-    County = "County Name",
-    `2014_TFR` = "2014",
-    TFR_Trend = "Trend",
-    `2022_TFR` = "2022",
-    `2014_women aged 15-49 who are currently pregnant` = "2014",
-    Pregnancy_Trend = "Trend",
-    `2022_Percentage of women aged 15-49 currently pregnant` = "2022",
-    `2014_Mean number of children ever born to women aged 40-49` = "2014",
-    Children_Trend = "Trend",
-    `2022_Mean number of children for women aged 40-49` = "2022"
-  ) %>%
-  cols_align(
-    align = "left",
-    columns = -c("County")
-  ) %>%
-  tab_spanner(
-    label = "TFR",
-    columns = c(`2014_TFR`, `2022_TFR`,TFR_Trend)
-  ) %>%
-  tab_spanner(
-    label = "Pregnancy",
-    columns = c(`2014_women aged 15-49 who are currently pregnant`, `2022_Percentage of women aged 15-49 currently pregnant`,Pregnancy_Trend)
-  ) %>%
-  tab_spanner(
-    label = "Children 40-49",
-    columns = c(`2014_Mean number of children ever born to women aged 40-49`, `2022_Mean number of children for women aged 40-49`,Children_Trend)
-  )
-
-# Add sparklines to the table
-gt_table <- gt_table %>%
-  tab_style(
-    style = cell_borders(
-      sides = "left",
-      color = "transparent"  # Set background color to transparent
-    ),
-    locations = cells_body(
-      columns = c("County")
-    )
+df <- comparison_data %>%
+  setNames(c("County", "2014_TFR", "2014_PREG", "2014_CHILD", "2022_TFR", "2022_PREG",
+             "2022_CHILD")) %>% 
+  rowwise() %>% 
+  mutate(change_TFR = list(c(`2014_TFR`, `2022_TFR`)),
+         change_PREG = list(c(`2014_PREG`, `2022_PREG`)),
+         change_CHILD = list(c(`2014_CHILD`, `2022_CHILD`))
   ) %>% 
-  tab_options(
-    heading.title.font.size = 20,
-    table.font.size = 13,
-    heading.subtitle.font.size = 12,
-    column_labels.font.weight = "bold",
+  select(County, `2014_TFR`, `2022_TFR`, change_TFR, 
+         `2014_PREG`, `2022_PREG`, change_PREG,
+         `2014_CHILD`, `2022_CHILD`, change_CHILD
   )
 
-custom_colors <- c("red3", "green4")  # Red for low values, green for high values
 
-# Apply the custom colors to the numeric columns
-gt_table <- gt_table %>%
-  data_color(
-    columns = c(
-      `2014_TFR`, 
-      `2022_TFR`,
-      `2014_women aged 15-49 who are currently pregnant`, 
-      `2022_Percentage of women aged 15-49 currently pregnant`,
-      `2014_Mean number of children ever born to women aged 40-49`, 
-      `2022_Mean number of children for women aged 40-49`
-    ),
-    palette = custom_colors,
-    direction = c("column"),
-    
-  ) |> 
-  opt_table_lines(extent = "all")
-gt_table
+glimpse(comparison_data)
 
-
-
+s <- "black"
+fv <- "black"
+rl <- "black"
+rh <- "black"
+t <- "black"
+          
+c_p <- c(s, fv, rl, rh, t)
+        
+table <- df %>% 
+          as_tibble() %>% 
+          gt() %>% 
+          gt_plt_sparkline(change_TFR, label = F, fig_dim = c(4, 8), palette = c_p) %>% 
+          gt_plt_sparkline(change_PREG, label = F, fig_dim = c(4, 8), palette = c_p) %>% 
+          gt_plt_sparkline(change_CHILD, label = F, fig_dim = c(4, 8), palette = c_p) %>% 
+          tab_header(
+            title = "Comparison of Fertility Indicators (2014 vs. 2022)",
+            subtitle = "Change in Fertility Indicators Trends"
+          ) %>% 
+          tab_spanner(
+            label = "Total Fertility Rate",
+            columns = `2014_TFR` : `2022_TFR`
+          )%>% 
+          tab_spanner(
+            label = "Pregnancy (15-49)",
+            columns = `2014_PREG` : `2022_PREG`
+          )%>% 
+          tab_spanner(
+            label = "Children 40-49",
+            columns = `2014_CHILD` : `2022_CHILD`
+          ) %>% 
+          cols_label(
+            County = "County Name",
+            `2014_TFR` = "2014",
+            `2022_TFR` = "2022",
+            change_TFR = "Trend",
+            `2014_PREG` = "2014",
+            `2022_PREG` = "2022",
+            change_PREG = "Trend",
+            `2014_CHILD` = "2014",
+            `2022_CHILD` = "2022",
+            change_CHILD = "Trend"
+            
+          ) %>% 
+          cols_align("left") %>% 
+          cols_width(
+            County ~ px(130),
+            `2014_TFR` ~ px(50),
+            `2022_TFR` ~ px(50),
+            change_TFR ~ px(50),
+            `2014_PREG` ~ px(50),
+            `2022_PREG` ~ px(50),
+            change_PREG ~ px(50),
+            `2014_CHILD` ~ px(50),
+            `2022_CHILD` ~ px(50),
+            change_CHILD ~ px(50)
+          )
+        
+        custom_colors <- c("red3", "green4")
+        
+        table <- table %>% 
+          data_color(
+            columns = c(
+              `2014_TFR`,
+              `2022_TFR`,
+              `2014_PREG`,
+              `2022_PREG`,
+              `2014_CHILD`,
+              `2022_CHILD`
+            ),
+            palette = custom_colors,
+            direction = "column"
+          ) %>% 
+          opt_table_lines(extent = "all") |> 
+          tab_options(
+            heading.title.font.size = 20,
+            table.font.size = 10,
+            heading.subtitle.font.size = 12,
+            column_labels.font.weight = "bold",
+          )
+          
+print(table)        
